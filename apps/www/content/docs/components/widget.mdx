@@ -1,0 +1,71 @@
+---
+title: Widget
+description: Displays a widget with header, content, and footer.
+component: true
+---
+
+<ComponentPreview name="widget-with-form" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx tintta-widgets@latest add widget
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="widget" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  Widget,
+  WidgetContent,
+  WidgetDescription,
+  WidgetFooter,
+  WidgetHeader,
+  WidgetTitle,
+} from "@/components/ui/widget"
+```
+
+```tsx
+<Widget>
+  <WidgetHeader>
+    <WidgetTitle>Widget Title</WidgetTitle>
+    <WidgetDescription>Widget Description</WidgetDescription>
+  </WidgetHeader>
+  <WidgetContent>
+    <p>Widget Content</p>
+  </WidgetContent>
+  <WidgetFooter>
+    <p>Widget Footer</p>
+  </WidgetFooter>
+</Widget>
+```
+
+## Examples
+
+<ComponentPreview name="widget-demo" />
