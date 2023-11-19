@@ -196,6 +196,13 @@
     "type": "components:ui"
   },
   {
+    "name": "link-widget",
+    "files": [
+      "ui/link-widget.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "menubar",
     "dependencies": [
       "@radix-ui/react-menubar"

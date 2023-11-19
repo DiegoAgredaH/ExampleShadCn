@@ -73,4 +73,11 @@ const WidgetFooter = React.forwardRef<
 ))
 WidgetFooter.displayName = "WidgetFooter"
 
-export { Widget, WidgetHeader, WidgetFooter, WidgetTitle, WidgetDescription, WidgetContent }
+export {
+  Widget,
+  WidgetHeader,
+  WidgetFooter,
+  WidgetTitle,
+  WidgetDescription,
+  WidgetContent,
+}
