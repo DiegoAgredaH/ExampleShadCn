@@ -7,7 +7,7 @@ import { Input } from "./input"
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
-  overrideClassName?: string
+  payload: (UrlInfo: UrlInfo | undefined) => void;
 }
 
 interface UrlInfo {
@@ -18,7 +18,7 @@ interface UrlInfo {
 }
 
 const LinkWidget = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, children, ...props }, ref) => {
+  ({ className, payload, children, ...props }, ref) => {
     const [data, setData] = useState(null)
     const [inputValue, setInputValue] = useState<string>("")
     const [loading, setLoading] = useState<boolean>(false)
@@ -27,10 +27,6 @@ const LinkWidget = React.forwardRef<HTMLInputElement, InputProps>(
     const [iconUrl, setIconUrl] = useState<string>("")
     const [title, setTitle] = useState<string>("")
     const [createPayload, setCreatePayload] = useState<UrlInfo>()
-
-    const createWidget = () => {
-      console.log("createPayload", createPayload)
-    }
 
     const fetchData = async (url: string) => {
       try {
@@ -101,7 +97,7 @@ const LinkWidget = React.forwardRef<HTMLInputElement, InputProps>(
     }, [data])
 
     useEffect(() => {
-      createWidget()
+      payload(createPayload)
     }, [createPayload])
 
     return (
