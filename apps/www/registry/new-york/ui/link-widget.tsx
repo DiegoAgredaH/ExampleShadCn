@@ -29,7 +29,7 @@ const LinkWidget = React.forwardRef<HTMLInputElement, InputProps>(
     const [createPayload, setCreatePayload] = useState<UrlInfo>()
 
     const createWidget = () => {
-      console.log('createPayload', createPayload)
+      console.log("createPayload", createPayload)
     }
 
     const fetchData = async (url: string) => {
@@ -103,7 +103,6 @@ const LinkWidget = React.forwardRef<HTMLInputElement, InputProps>(
     useEffect(() => {
       createWidget()
     }, [createPayload])
-    
 
     return (
       <>

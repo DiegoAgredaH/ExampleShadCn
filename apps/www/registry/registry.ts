@@ -893,7 +893,6 @@ const example: Registry = [
     registryDependencies: ["widget", "button", "switch"],
     files: ["example/widget-demo.tsx"],
   },
-
 ]
 
 export const registry: Registry = [...ui, ...example]
