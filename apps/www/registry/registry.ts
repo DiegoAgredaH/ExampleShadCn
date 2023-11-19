@@ -122,6 +122,11 @@ const ui: Registry = [
     files: ["ui/label.tsx"],
   },
   {
+    name: "link-widget",
+    type: "components:ui",
+    files: ["ui/link-widget.tsx"],
+  },
+  {
     name: "menubar",
     type: "components:ui",
     dependencies: ["@radix-ui/react-menubar"],
@@ -573,6 +578,12 @@ const example: Registry = [
     type: "components:example",
     registryDependencies: ["label"],
     files: ["example/label-demo.tsx"],
+  },
+  {
+    name: "link-widget-demo",
+    type: "components:example",
+    registryDependencies: ["link-widget"],
+    files: ["example/link-widget-demo.tsx"],
   },
   {
     name: "menubar-demo",

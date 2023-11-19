@@ -138,6 +138,13 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/new-york/ui/label")),
       files: ["registry/new-york/ui/label.tsx"],
     },
+    "link-widget": {
+      name: "link-widget",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/new-york/ui/link-widget")),
+      files: ["registry/new-york/ui/link-widget.tsx"],
+    },
     "menubar": {
       name: "menubar",
       type: "components:ui",
@@ -662,6 +669,13 @@ export const Index: Record<string, any> = {
       registryDependencies: ["label"],
       component: React.lazy(() => import("@/registry/new-york/example/label-demo")),
       files: ["registry/new-york/example/label-demo.tsx"],
+    },
+    "link-widget-demo": {
+      name: "link-widget-demo",
+      type: "components:example",
+      registryDependencies: ["link-widget"],
+      component: React.lazy(() => import("@/registry/new-york/example/link-widget-demo")),
+      files: ["registry/new-york/example/link-widget-demo.tsx"],
     },
     "menubar-demo": {
       name: "menubar-demo",
