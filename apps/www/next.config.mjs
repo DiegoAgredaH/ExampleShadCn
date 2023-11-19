@@ -5,7 +5,13 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["avatars.githubusercontent.com", "images.unsplash.com"],
+    // domains: ["avatars.githubusercontent.com", "images.unsplash.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
   redirects() {
     return [
